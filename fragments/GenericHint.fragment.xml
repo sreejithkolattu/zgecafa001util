@@ -1,0 +1,16 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout">
+	<Dialog showHeader="false" verticalScrolling="false" horizontalScrolling="false" contentWidth="50%" resizable="false" class="dialogPadding">
+		<VBox class="dialogPadding">
+		<Toolbar class="textBold" >
+			<Title wrapping="true" text="{/Title}" titleStyle="H1" textAlign="Begin" class="textBold sapUiSmallMarginBeginEnd sapUiTinyMarginTopBottom"/>
+			<ToolbarSpacer/>
+			<core:Icon src="sap-icon://decline" id="btnOk" color="#000000" class="iconSize1 sapUiSmallMarginEnd"/>
+		</Toolbar>
+		<VBox justifyContent="Start" alignItems="Start">
+			<Title wrapping="true"
+				text="{/BodyText}"
+				level="H2" textAlign="Begin" class="sapUiSmallMarginBeginEnd sapUiSmallMarginTopBottom"/>
+		</VBox>
+		</VBox>
+	</Dialog>
+</core:FragmentDefinition>
