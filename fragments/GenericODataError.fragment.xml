@@ -1,0 +1,15 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout">
+	<Dialog showHeader="false"  verticalScrolling="false" horizontalScrolling="false" resizable="false">
+		<VBox class="dialogPadding" alignItems="Center">
+			<HBox class="dialogStretchText">
+			<core:Icon src="sap-icon://message-error" class="iconSize2 sapUiMediumMarginTopBottom" color="red"/>
+			</HBox><HBox class="dialogHead" width="100%">
+			<Title  text="{/Title}" titleStyle="H1" level="H1" width="100%" textAlign="Center" class="dialogTitle sapUiLargeMarginBeginEnd sapUiTinyMarginTopBottom"/>
+			</HBox><HBox>
+			<Title  text="{/SubTitle}" level="H2"  textAlign="Center" class="dialogTitle sapUiTinyMarginBottom"/>
+			</HBox><HBox class="sapUiSmallMarginTopBottom">
+			<Button id="btnOk" text="{/BtnOkText}" type="Emphasized" class="dialogSingleBtn sapUiSmallMarginTopBottom"></Button>
+			</HBox>
+		</VBox>
+	</Dialog>
+</core:FragmentDefinition>
