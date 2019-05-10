@@ -1,0 +1,21 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Dialog class="sapUiResponsiveMargin" showHeader="false"  verticalScrolling="false" horizontalScrolling="false"
+		 resizable="false">
+		<VBox class="dialogPadding" alignItems="Center">
+			<HBox class="dialogConfirmationText">
+			<core:Icon src="sap-icon://message-warning" class="dialogConfirmationTitle dialogConfirmTitleFont sapUiLargeMarginBeginEnd sapUiTinyMarginTopBottom" color="#fabd64"/>
+			<HBox class="dialogHead" width="100%">
+			<Title text="{/Title}" titleStyle="H1" level="H1" textAlign="Begin" class="dialogConfirmationTitle sapUiLargeMarginBeginEnd sapUiTinyMarginTopBottom"/>
+			</HBox></HBox>
+			<HBox class="dialogConfirmationText dialogHead"> 
+			<Title text="{/SubTitle}" level="H2" textAlign="Center" class="dialogConfirmationTitle sapUiTinyMarginBottom"/>
+			</HBox>
+			<HBox class="dialogPadding5 dialogHead" width="100%"><html:hr width="100%"></html:hr></HBox>
+			<HBox class="sapUiTinyMarginTop sapUiSmallMarginBottom sapMFlexBoxJustifyEnd" width="100%">
+				<Button id="btnNo" text="{/BtnNoText}" width="100%" class="dialogMultipleBtn sapUiSmallMarginBegin sapUiTinyMarginTop sapUiSmallMarginBottom"></Button>
+				<Button id="btnYes" text="{/BtnYesText}" width="100%" type="Emphasized"
+					class="dialogMultipleBtn sapUiSmallMarginEnd sapUiTinyMarginTop sapUiSmallMarginBottom"></Button>
+			</HBox>
+		</VBox>
+	</Dialog>
+</core:FragmentDefinition>
