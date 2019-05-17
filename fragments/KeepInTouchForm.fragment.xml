@@ -1,0 +1,135 @@
+<core:FragmentDefinition xmlns:layout="sap.ui.layout" xmlns="sap.m" xmlns:core="sap.ui.core">
+	<!--Table to display all Volunteer Check Box data -->
+	<VBox class="sapUiResponsiveMargin sapUiNoMarginBottom">
+		<items>
+			<!--Header Level Section -->
+			<VBox alignItems="Center">
+				<Label text="{keepInTouchFormModel>/LblWeWantToKeepInTouchWithYou}" design="Bold" wrapping="true"></Label>
+				<Label text="{keepInTouchFormModel>/LblThankYouNote}" wrapping="true"></Label>
+				<Label text="{keepInTouchFormModel>/LblHopeNote}" wrapping="true"></Label>
+				<Label text="{keepInTouchFormModel>/LblLetUsKnowNote}" wrapping="true"></Label>
+			</VBox>
+			<!-- Yes! I would like to receive regular email update Section -->
+			<VBox>
+				<HBox>
+					<CheckBox id="cbEmailId" selected="{keepInTouchFormModel>/RegularEmail}" fieldGroupIds="fgCheckBox"></CheckBox>
+					<Label text="{keepInTouchFormModel>/TxtReceiveInformation}" required="true" class="sapUiTinyMarginTop" design="Bold" wrapping="true"></Label>
+				</HBox>
+			</VBox>
+			<!-- Yes! I would like volunteer with the HT Section -->
+			<VBox>
+				<HBox>
+					<CheckBox id="cbVolunteerId" selected="{keepInTouchFormModel>/Volunteer}" fieldGroupIds="fgCheckBox"></CheckBox>
+					<Label text="{keepInTouchFormModel>/TxtVolunteer}" required="true" class="sapUiTinyMarginTop" design="Bold" wrapping="true"></Label>
+				</HBox>
+			</VBox>
+			<Table showNoData="false" class="sapUiSmallMarginBegin">
+				<!-- Table Column Heading  -->
+				<columns>
+					<Column mergeDuplicates="true" width="30%">
+						<header>
+							<Label text="{keepInTouchFormModel>/LblArea}" design="Bold" wrapping="true"></Label>
+						</header>
+					</Column>
+					<Column width="30%">
+						<header>
+							<Label text="{keepInTouchFormModel>/LblVolunteerScheme}" design="Bold" wrapping="true"></Label>
+						</header>
+					</Column>
+					<Column width="30%">
+						<header>
+							<Label text="{keepInTouchFormModel>/LblCommentment}" design="Bold" wrapping="true"></Label>
+						</header>
+					</Column>
+					<Column width="10%">
+						<header>
+							<Label text="{keepInTouchFormModel>/LblChoice}" design="Bold" wrapping="true"></Label>
+						</header>
+					</Column>
+				</columns>
+				<!-- Table Column Values -->
+				<ColumnListItem>
+					<Label text="{keepInTouchFormModel>/LblCommunityPolicingAndCrimePrevention}" wrapping="true"></Label>
+					<Label text="{keepInTouchFormModel>/LblVolunteerSpecial}" wrapping="true"></Label>
+					<Label text="{keepInTouchFormModel>/Lbl8HoursAMonth}" wrapping="true"></Label>
+					<CheckBox id="cbVolunteerCommunity8HrsId" selected="{keepInTouchFormModel>/VolunteerCommunity8Hrs}"></CheckBox>
+				</ColumnListItem>
+				<ColumnListItem>
+					<Label text="{keepInTouchFormModel>/LblCommunityPolicingAndCrimePrevention}" wrapping="true"></Label>
+					<Label text="{keepInTouchFormModel>/LblCitizenOfPetrol}" wrapping="true"></Label>
+					<Label text="{keepInTouchFormModel>/Lbl2HoursAMonth}" wrapping="true"></Label>
+					<CheckBox id="cbVolunteerCommunity2HrsId" selected="{keepInTouchFormModel>/VolunteerCommunity2Hrs}"></CheckBox>
+				</ColumnListItem>
+				<ColumnListItem>
+					<Label text="{keepInTouchFormModel>/LblCommunityPolicingAndCrimePrevention}" wrapping="true"></Label>
+					<Label text="{keepInTouchFormModel>/LblCrimePreventionAmbassador}" wrapping="true"></Label>
+					<Label text="{keepInTouchFormModel>/Lbl4-5HoursAMonth}" wrapping="true"></Label>
+					<CheckBox id="cbVolunteerCommunity4HrsId" selected="{keepInTouchFormModel>/VolunteerCommunity4Hrs}"></CheckBox>
+				</ColumnListItem>
+				<ColumnListItem>
+					<Label text="{keepInTouchFormModel>/LblRehabilitationAndReintegration}" wrapping="true"></Label>
+					<Label text="{keepInTouchFormModel>/LblSpsBefrienders}" wrapping="true"></Label>
+					<Label text="{keepInTouchFormModel>/Lbl2-3HoursAMonth}" wrapping="true"></Label>
+					<CheckBox id="cbVolunteerRehab2HrsId" selected="{keepInTouchFormModel>/VolunteerRehab2Hrs}"></CheckBox>
+				</ColumnListItem>
+				<ColumnListItem>
+					<Label text="{keepInTouchFormModel>/LblRehabilitationAndReintegration}" wrapping="true"></Label>
+					<Label text="{keepInTouchFormModel>/LblYellowRibbonVolunteers}" wrapping="true"></Label>
+					<Label text="{keepInTouchFormModel>/LblAd-hocDuringYr}" wrapping="true"></Label>
+					<CheckBox id="cbVolunteerRehabADhocId" selected="{keepInTouchFormModel>/VolunteerRehabADhoc}"></CheckBox>
+				</ColumnListItem>
+				<ColumnListItem>
+					<Label text="{keepInTouchFormModel>/LblDrugs}" wrapping="true"></Label>
+					<Label text="{keepInTouchFormModel>/LblAnti-DrugAbuse}" wrapping="true"></Label>
+					<Label text="{keepInTouchFormModel>/LblAd-hoc}" wrapping="true"></Label>
+					<CheckBox id="cbVolunteerDrugsADhocId" selected="{keepInTouchFormModel>/VolunteerDrugsADhoc}"></CheckBox>
+				</ColumnListItem>
+			</Table>
+			<!-- Volunteer opportunities available Section -->
+			<VBox alignItems="Center" class="sapUiTinyMarginTop">
+				<HBox>
+					<Label text="{keepInTouchFormModel>/LblVisit}" class="sapUiTinyMarginEnd" wrapping="true"></Label>
+					<Link text="{keepInTouchFormModel>/LblVisitUrl}"/>
+					<Label text="{keepInTouchFormModel>/LblToFindOut}" class="sapUiTinyMarginBegin" wrapping="true"></Label>
+					<Label text="{keepInTouchFormModel>/LblExtraordinaryMission}" design="Bold" class="sapUiTinyMarginBegin" wrapping="true"></Label>
+				</HBox>
+			</VBox>
+			<!-- Yes! If there is an opportunity, I would like to contribute Section -->
+			<VBox>
+				<HBox>
+					<CheckBox id="cbYesIContributeId" selected="{keepInTouchFormModel>/YesIContribute}"
+						fieldGroupIds="fgCheckBox"></CheckBox>
+					<Label text="{keepInTouchFormModel>/TxtOpportunity}" required="true" class="sapUiTinyMarginTop" design="Bold" wrapping="true"></Label>
+				</HBox>
+			</VBox>
+			<Table showNoData="false" class="sapUiSmallMarginBegin">
+				<!-- Table Column Heading  -->
+				<columns>
+					<Column width="10%"></Column>
+					<Column width="40%"></Column>
+					<Column width="10%"></Column>
+					<Column width="40%"></Column>
+				</columns>
+				<!-- Table Column Values -->
+				<ColumnListItem>
+					<CheckBox id="cbFrontOperationId" selected="{keepInTouchFormModel>/FrontOperation}"></CheckBox>
+					<Label text="{keepInTouchFormModel>/LblForntlineOperatior}" wrapping="true"></Label>
+					<CheckBox id="cbCommunicationPublicEngagementId" selected="{keepInTouchFormModel>/CommunicationPublicEngagement}"></CheckBox>
+					<Label text="{keepInTouchFormModel>/LblCommunicationandPublicEngagement}" wrapping="true"></Label>
+				</ColumnListItem>
+				<ColumnListItem>
+					<CheckBox id="cbTechnologyId" selected="{keepInTouchFormModel>/Technology}"></CheckBox>
+					<Label text="{keepInTouchFormModel>/LblTechnology}" wrapping="true"></Label>
+					<CheckBox id="cbEnforcementIntelligenceId" selected="{keepInTouchFormModel>/EnforcementIntelligence}"></CheckBox>
+					<Label text="{keepInTouchFormModel>/LblEnforcementIntellegenceInvestigations}" wrapping="true"></Label>
+				</ColumnListItem>
+				<ColumnListItem>
+					<CheckBox id="cbTrainingDevelopmentId" selected="{keepInTouchFormModel>/TrainingDevelopment}"></CheckBox>
+					<Label text="{keepInTouchFormModel>/LblTrainingandDevelopment}" wrapping="true"></Label>
+					<CheckBox id="cbOthersId" selected="{keepInTouchFormModel>/Others}"></CheckBox>
+					<Label text="{keepInTouchFormModel>/LblOthers}" wrapping="true"></Label>
+				</ColumnListItem>
+			</Table>
+		</items>
+	</VBox>
+</core:FragmentDefinition>
