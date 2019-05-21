@@ -1,0 +1,67 @@
+.dialogTitle{
+	width: 100%;
+    white-space: pre-wrap !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+.dialogConfirmTitleFont{
+	font-size : 1.4rem;
+    margin-top: 0.5rem!important;
+    line-height: 1.4;
+}
+.dialogPadding{
+	margin: 10px;
+}
+.dialogConfirmationTitle{
+	width: 100%;
+	justify-content: left;
+    white-space: pre-wrap !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 2%;
+    padding-right: 5%;
+    text-align: left;
+}
+.dialogConfirmationText{
+	padding-top: 5%;
+    width: 100%;
+    padding-left: 5%;
+}
+.dialogSingleBtn{
+	min-width: 135px;
+	min-height: 32px;
+}
+.dialogMultipleBtn{
+	min-width: 135px;
+	min-height: 32px;
+	padding-right: 2rem !important;
+}
+.dialogStretchText{
+	width: 100%; 
+	justify-content: center;
+}
+.dialogHead>div{
+	width: 100%; 
+}
+.dialogPadding5{
+	padding-right: 5%;
+    padding-left: 5%;
+}
+.dialogBtnMinWidth{
+	min-width: 135px;
+	min-height: 32px;
+}
+.textBold{
+	font-weight:bold;
+}
+.iconSize1 {
+	font-size : 1.5rem;
+}
+.iconSize2 {
+	font-size : 5rem;
+}
+.iconSize3 {
+	font-size : 6rem;
+}
