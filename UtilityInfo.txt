@@ -1,0 +1,30 @@
+Available Controls in Utility:
+Last update: April 10,2019
+
+
+1) F4Help ( For Pernr )
+2) Digital Signature
+3) Employee Card
+4) Fragment Utility to show below dialoges
+    1) Warning
+    2) Delete
+    3) Success
+    4) Info
+    5) Odata Error
+    6) Hint
+5) Employee Button with Hover
+6) Form Validation
+	1) Input
+	2) Dropdowns
+	3) Emails
+	4) Numaric
+	5) Radio button
+	6) Radio button Group
+	7) Date
+	8) CheckBox
+	9) Mobile/Phone 
+	10) File uploader
+	
+Note: It is mandatory to give id to those element which have to be valudated in fragment	
+To Validate entire form use : ValidateForm (that, formId)	
+To Validate part of form use, the fragment id in the call :ValidateForm (that, <frag_id>)
