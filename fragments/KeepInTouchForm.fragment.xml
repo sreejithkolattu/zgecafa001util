@@ -1,0 +1,200 @@
+<core:FragmentDefinition xmlns:layout="sap.ui.layout" xmlns="sap.m" xmlns:form="sap.ui.layout.form" xmlns:core="sap.ui.core">
+	<VBox class="sapUiResponsiveMargin sapUiNoMarginBottom">
+		<items>
+			<!--Header Level Section -->
+			<VBox alignItems="Center">
+				<Label id="lbWeWantToKeepInTouchWithYou" text="{keepInTouchFormModel>/lblWeWantToKeepInTouchWithYou}" design="Bold" wrapping="true"></Label>
+				<Label id="lbThankYouNote" text="{keepInTouchFormModel>/lblThankYouNote}" wrapping="true"></Label>
+				<Label id="lbHopeNote" text="{keepInTouchFormModel>/lblHopeNote}" wrapping="true"></Label>
+				<Label id="lbLetUsKnowNote" text="{keepInTouchFormModel>/lblLetUsKnowNote}" wrapping="true"></Label>
+			</VBox>
+			<!-- Yes! I would like to receive regular email update Section -->
+			<VBox>
+				<HBox>
+					<CheckBox id="cbEmail" selected="{keepInTouchFormModel>/bRegularEmail}"
+						fieldGroupIds="{= ${keepInTouchFormModel>/oFlagCheckBoxValidation} === true ? 'fgCheckBox' : '' }"></CheckBox>
+					<Label id="lbReceiveInformation" text="{keepInTouchFormModel>/lblReceiveInformation}" required="true" class="sapUiTinyMarginTop"
+						design="Bold" wrapping="true"></Label>
+				</HBox>
+			</VBox>
+			<!-- Form : Personal data fields Section -->
+			<form:Form id="foDetailForm" visible="{keepInTouchFormModel>/oFlagPersonalDetailForm}" class="sapUiSmallMarginBegin">
+				<form:layout>
+					<form:ResponsiveGridLayout labelSpanXL="5" labelSpanL="5" labelSpanM="4" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0"
+						emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="2" columnsL="2" columnsM="2"/>
+				</form:layout>
+				<form:formContainers>
+					<form:FormContainer>
+						<form:formElements>
+							<form:FormElement>
+								<form:fields>
+									<Label id="lbPersonnelNumber" text="{keepInTouchFormModel>/lblPersonnelNumber}" required="true" design="Bold" wrapping="true"
+										class="sapUiTinyMarginTop"></Label>
+								</form:fields>
+								<form:fields>
+									<Input value="{keepInTouchFormModel>/oValuePersonNo}" editable="false" required="true"
+										fieldGroupIds="{= ${keepInTouchFormModel>/oFlagPersonalDetailForm} === true ? 'fgNumber' : '' }"/>
+								</form:fields>
+							</form:FormElement>
+							<form:FormElement >
+								<form:fields>
+									<Label id="lbPersonnelEmailAddress" text="{keepInTouchFormModel>/lblPersonnelEmailAddress}" required="true" design="Bold" wrapping="true"
+										class="sapUiTinyMarginTop"></Label>
+								</form:fields>
+								<form:fields>
+									<Input id="ipEmail" value="{keepInTouchFormModel>/oValuePersonalEmail}" editable="true" required="true"
+										fieldGroupIds="{= ${keepInTouchFormModel>/oFlagPersonalDetailForm} === true ? 'fgEmail' : '' }"/>
+								</form:fields>
+							</form:FormElement>
+						</form:formElements>
+					</form:FormContainer>
+					<form:FormContainer>
+						<form:formElements>
+							<form:FormElement>
+								<form:fields>
+									<Label id="lbEmployeeName" text="{keepInTouchFormModel>/lblEmployeeName}" required="true" design="Bold" wrapping="true"
+										class="sapUiTinyMarginTop"></Label>
+								</form:fields>
+								<form:fields>
+									<Input value="{keepInTouchFormModel>/oValueEmpName}" editable="false" required="true"
+										fieldGroupIds="{= ${keepInTouchFormModel>/oFlagPersonalDetailForm} === true ? 'fgInput' : '' }"/>
+								</form:fields>
+							</form:FormElement>
+							<form:FormElement>
+								<form:fields>
+									<Label id="lbMobileNumber" text="{keepInTouchFormModel>/lblMobileNumber}" required="true" design="Bold" wrapping="true"
+										class="sapUiTinyMarginTop"></Label>
+								</form:fields>
+								<form:fields>
+									<Input id="ipMobileNo" placeholder="{keepInTouchFormModel>/phMobileNumber}" value="{keepInTouchFormModel>/oValueMobileNumber}" type="Number"
+										required="true" fieldGroupIds="{= ${keepInTouchFormModel>/oFlagPersonalDetailForm} === true ? 'fgMobile' : '' }" editable="true"/>
+								</form:fields>
+							</form:FormElement>
+						</form:formElements>
+					</form:FormContainer>
+				</form:formContainers>
+			</form:Form>
+			<!-- Yes! I would like volunteer with the HT Section -->
+			<VBox>
+				<HBox>
+					<CheckBox id="cbVolunteer" selected="{keepInTouchFormModel>/bVolunteer}"
+						fieldGroupIds="{= ${keepInTouchFormModel>/oFlagCheckBoxValidation} === true ? 'fgCheckBox' : '' }"></CheckBox>
+					<Label id="lbVolunteer" text="{keepInTouchFormModel>/lblVolunteer}" required="true" class="sapUiTinyMarginTop" design="Bold" wrapping="true"></Label>
+				</HBox>
+			</VBox>
+			<VBox>
+				<Table id="tbVolunteer" showNoData="false" class="sapUiSmallMarginBegin">
+					<!-- Table Column Heading  -->
+					<columns>
+						<Column id="clArea" width="30%">
+							<header>
+								<Label id="lbArea" text="{keepInTouchFormModel>/lblArea}" design="Bold" wrapping="true"></Label>
+							</header>
+						</Column>
+						<Column id="clVolunteerScheme" width="30%">
+							<header>
+								<Label id="lbVolunteerScheme" text="{keepInTouchFormModel>/lblVolunteerScheme}" design="Bold" wrapping="true"></Label>
+							</header>
+						</Column>
+						<Column id="clCommentment" width="20%">
+							<header>
+								<Label id="lbCommentment" text="{keepInTouchFormModel>/lblCommentment}" design="Bold" wrapping="true"></Label>
+							</header>
+						</Column>
+						<Column id="clChoice" width="10%">
+							<header>
+								<Label id="lbChoice" text="{keepInTouchFormModel>/lblChoice}" design="Bold" wrapping="true"></Label>
+							</header>
+						</Column>
+					</columns>
+					<!-- Table Column Values -->
+					<ColumnListItem id="clVolunteerCommunity8Hrs">
+						<Label id="lbCommunityPolicingAndCrimePrevention" text="{keepInTouchFormModel>/lblCommunityPolicingAndCrimePrevention}" wrapping="true"></Label>
+						<Label id="lbVolunteerSpecial" text="{keepInTouchFormModel>/lblVolunteerSpecial}" wrapping="true"></Label>
+						<Label id="lb8HoursAMonth" text="{keepInTouchFormModel>/lbl8HoursAMonth}" wrapping="true"></Label>
+						<CheckBox id="cbVolunteerCommunity8Hrs" selected="{keepInTouchFormModel>/bVolunteerCommunity8Hrs}"></CheckBox>
+					</ColumnListItem>
+					<ColumnListItem id="clVolunteerCommunity2Hrs">
+						<Label text="" wrapping="true"></Label>
+						<Label id="lbCitizenOfPetrol" text="{keepInTouchFormModel>/lblCitizenOfPetrol}" wrapping="true"></Label>
+						<Label id="lb2HoursAMonth" text="{keepInTouchFormModel>/lbl2HoursAMonth}" wrapping="true"></Label>
+						<CheckBox id="cbVolunteerCommunity2Hrs" selected="{keepInTouchFormModel>/bVolunteerCommunity2Hrs}"></CheckBox>
+					</ColumnListItem>
+					<ColumnListItem id="clVolunteerCommunity4Hrs">
+						<Label text=" " wrapping="true"></Label>
+						<Label id="lbCrimePreventionAmbassador" text="{keepInTouchFormModel>/lblCrimePreventionAmbassador}" wrapping="true"></Label>
+						<Label id="lb4-5HoursAMonth" text="{keepInTouchFormModel>/lbl4-5HoursAMonth}" wrapping="true"></Label>
+						<CheckBox id="cbVolunteerCommunity4Hrs" selected="{keepInTouchFormModel>/bVolunteerCommunity4Hrs}"></CheckBox>
+					</ColumnListItem>
+					<ColumnListItem id="clVolunteerRehab2Hrs">
+						<Label id="lbRehabilitationAndReintegration" text="{keepInTouchFormModel>/lblRehabilitationAndReintegration}" class="sapUiTinyMarginTop"
+							wrapping="true"></Label>
+						<Label id="lbSpsBefrienders" text="{keepInTouchFormModel>/lblSpsBefrienders}" class="sapUiSmallMarginBottom" wrapping="true"></Label>
+						<Label id="lb2-3HoursAMonth" text="{keepInTouchFormModel>/lbl2-3HoursAMonth}" class="sapUiSmallMarginBottom" wrapping="true"></Label>
+						<CheckBox id="cbVolunteerRehab2Hrs" class="sapUiSmallMarginBottom" selected="{keepInTouchFormModel>/bVolunteerRehab2Hrs}"></CheckBox>
+					</ColumnListItem>
+					<ColumnListItem id="clVolunteerRehabADhoc">
+						<Label text="" wrapping="true"></Label>
+						<Label id="lbYellowRibbonVolunteers" text="{keepInTouchFormModel>/lblYellowRibbonVolunteers}" class="sapUiMediumMarginBottom"
+							wrapping="true"></Label>
+						<Label id="lbAd-hocDuringYr" text="{keepInTouchFormModel>/lblAd-hocDuringYr}" class="sapUiMediumMarginBottom" wrapping="true"></Label>
+						<CheckBox id="cbVolunteerRehabADhoc" class="sapUiMediumMarginBottom" selected="{keepInTouchFormModel>/bVolunteerRehabADhoc}"></CheckBox>
+					</ColumnListItem>
+					<ColumnListItem id="clVolunteerDrugsADhoc">
+						<Label id="lbDrugs" text="{keepInTouchFormModel>/lblDrugs}" class="sapUiLargeMarginBottom" wrapping="true"></Label>
+						<Label id="lbAnti-DrugAbuse" text="{keepInTouchFormModel>/lblAnti-DrugAbuse}" class="sapUiLargeMarginBottom" wrapping="true"></Label>
+						<Label id="lbAd-hoc" text="{keepInTouchFormModel>/lblAd-hoc}" class="sapUiLargeMarginBottom" wrapping="true"></Label>
+						<CheckBox id="cbVolunteerDrugsADhoc" class="sapUiLargeMarginBottom" selected="{keepInTouchFormModel>/bVolunteerDrugsADhoc}"></CheckBox>
+					</ColumnListItem>
+				</Table>
+			</VBox>
+			<!-- Volunteer opportunities available Section -->
+			<VBox alignItems="Center" class="sapUiTinyMarginTop">
+				<HBox>
+					<Label id="lbVisit" text="{keepInTouchFormModel>/lblVisit}" class="sapUiTinyMarginEnd" wrapping="true"></Label>
+					<Link text="{keepInTouchFormModel>/lblVisitUrl}"/>
+					<Label id="lbToFindOut" text="{keepInTouchFormModel>/lblToFindOut}" class="sapUiTinyMarginBegin" wrapping="true"></Label>
+					<Label id="lbExtraordinaryMission" text="{keepInTouchFormModel>/lblExtraordinaryMission}" design="Bold" class="sapUiTinyMarginBegin"
+						wrapping="true"></Label>
+				</HBox>
+			</VBox>
+			<!-- Yes! If there is an opportunity, I would like to contribute Section -->
+			<VBox>
+				<HBox>
+					<CheckBox id="cbYesIContribute" selected="{keepInTouchFormModel>/YesIContribute}"
+						fieldGroupIds="{= ${keepInTouchFormModel>/oFlagCheckBoxValidation} === true ? 'fgCheckBox' : '' }"></CheckBox>
+					<Label id="lbOpportunity" text="{keepInTouchFormModel>/lblOpportunity}" required="true" class="sapUiTinyMarginTop" design="Bold"
+						wrapping="true"></Label>
+				</HBox>
+			</VBox>
+			<Table id="tbOpportunity" showNoData="false" class="sapUiSmallMarginBegin">
+				<!-- Table Column Heading  -->
+				<columns>
+					<Column id="clCommunication" width="10%"></Column>
+					<Column id="clEnforcement" width="40%"></Column>
+					<Column id="clTraining" width="10%"></Column>
+					<Column id="clOthers" width="40%"></Column>
+				</columns>
+				<!-- Table Column Values -->
+				<ColumnListItem id="clFrontOperation">
+					<CheckBox id="cbFrontOperation" selected="{keepInTouchFormModel>/bFrontOperation}"></CheckBox>
+					<Label id="lbForntlineOperatior" text="{keepInTouchFormModel>/lblForntlineOperatior}" wrapping="true"></Label>
+					<CheckBox id="cbCommunicationPublicEngagement" selected="{keepInTouchFormModel>/bCommunicationPublicEngagement}"></CheckBox>
+					<Label id="lbCommunicationandPublicEngagement" text="{keepInTouchFormModel>/lblCommunicationandPublicEngagement}" wrapping="true"></Label>
+				</ColumnListItem>
+				<ColumnListItem id="clTechnology">
+					<CheckBox id="cbTechnology" selected="{keepInTouchFormModel>/bTechnology}"></CheckBox>
+					<Label id="lbTechnology" text="{keepInTouchFormModel>/lblTechnology}" wrapping="true"></Label>
+					<CheckBox id="cbEnforcementIntelligence" selected="{keepInTouchFormModel>/bEnforcementIntelligence}"></CheckBox>
+					<Label id="lbEnforcementIntellegenceInvestigations" text="{keepInTouchFormModel>/lblEnforcementIntellegenceInvestigations}" wrapping="true"></Label>
+				</ColumnListItem>
+				<ColumnListItem id="clTrainingDevelopment">
+					<CheckBox id="cbTrainingDevelopment" selected="{keepInTouchFormModel>/bTrainingDevelopment}"></CheckBox>
+					<Label id="lbTrainingandDevelopment" text="{keepInTouchFormModel>/lblTrainingandDevelopment}" wrapping="true"></Label>
+					<CheckBox id="cbOthers" selected="{keepInTouchFormModel>/bOthers}"></CheckBox>
+					<Label id="lbOthers" text="{keepInTouchFormModel>/lblOthers}" wrapping="true"></Label>
+				</ColumnListItem>
+			</Table>
+		</items>
+	</VBox>
+</core:FragmentDefinition>
