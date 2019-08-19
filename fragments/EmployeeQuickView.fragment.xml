@@ -1,0 +1,25 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<QuickView id="quickView" pages="{ path : 'empQuickView>/oEmpInfoData', templateShareable : 'true'}" navigate=".onNavigate">
+		<QuickViewPage
+				pageId="{empQuickView>pageId}"
+				header="{empQuickView>header}"
+				icon="{empQuickView>icon}"
+				title="{empQuickView>title}"
+				titleUrl="{empQuickView>titleUrl}"
+				description="{empQuickView>description}"
+				groups="{ path : 'empQuickView>groups', templateShareable : 'true'}">
+			<QuickViewGroup heading="{empQuickView>heading}" elements="{ path : 'empQuickView>elements', templateShareable : 'true'}">
+				<QuickViewGroupElement
+						label="{empQuickView>label}"
+						value="{empQuickView>value}"
+						url="{empQuickView>url}"
+						type="{empQuickView>elementType}"
+						pageLinkId="{empQuickView>pageLinkId}"
+						emailSubject="{empQuickView>emailSubject}"
+						target="{empQuickView>target}"
+						>
+				</QuickViewGroupElement>
+			</QuickViewGroup>
+		</QuickViewPage>
+	</QuickView>
+</core:FragmentDefinition>
