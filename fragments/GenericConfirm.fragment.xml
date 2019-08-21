@@ -1,0 +1,37 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Dialog class="sapUiResponsiveMargin" showHeader="false" verticalScrolling="false" horizontalScrolling="false" resizable="false">
+		<content>
+			<VBox class="dialogPadding" alignItems="Center" width="100%">
+				<HBox class="dialogConfirmationText">
+					<core:Icon src="sap-icon://message-warning"
+						class="dialogConfirmationTitle dialogConfirmTitleFont sapUiLargeMarginBeginEnd sapUiTinyMarginTopBottom" color="#fabd64"/>
+					<HBox class="dialogHead" width="100%">
+						<Title text="{/Title}" titleStyle="H2" level="H2" textAlign="Begin"
+							class="dialogConfirmationTitle sapUiLargeMarginBeginEnd sapUiTinyMarginTopBottom"/>
+					</HBox>
+				</HBox>
+				<HBox class="sapUiResponsiveMargin dialogHead">
+					<Label text="{/SubTitle}" class="dialogConfirmationTitle sapUiTinyMarginBottom subTitleLabel"/>
+				</HBox>
+				<HBox class="sapUiResponsiveMargin dialogHead">
+					<Label text="{/SubTitle2}" class="dialogConfirmationTitle sapUiTinyMarginBottom subTitleLabel"/>
+				</HBox>
+				<HBox class="dialogPadding5 dialogHead" width="100%">
+					<html:hr width="100%"></html:hr>
+				</HBox>
+				<!--<HBox class="sapUiTinyMarginTop sapUiSmallMarginBottom sapMFlexBoxJustifyEnd" width="100%">-->
+				<!--	<Button id="btnNo" text="{/BtnNoText}" width="100%"-->
+				<!--		class="dialogMultipleBtn sapUiSmallMarginBegin sapUiTinyMarginTop sapUiSmallMarginBottom"></Button>-->
+				<!--	<Button id="btnYes" text="{/BtnYesText}" width="100%" type="Emphasized"-->
+				<!--		class="dialogMultipleBtn sapUiSmallMarginEnd sapUiTinyMarginTop sapUiSmallMarginBottom"></Button>-->
+				<!--</HBox>-->
+			</VBox>
+		</content>
+		<buttons>
+			<Button id="btnNo" text="{/BtnNoText}" width="100%"
+				class="dialogMultipleBtn sapUiSmallMarginBegin sapUiTinyMarginTop sapUiSmallMarginBottom"></Button>
+			<Button id="btnYes" text="{/BtnYesText}" width="100%" type="Emphasized"
+				class="dialogMultipleBtn sapUiSmallMarginEnd sapUiTinyMarginTop sapUiSmallMarginBottom"></Button>
+		</buttons>
+	</Dialog>
+</core:FragmentDefinition>
