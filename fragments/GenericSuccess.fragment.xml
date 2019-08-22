@@ -1,0 +1,19 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout">
+	<Dialog showHeader="false" verticalScrolling="false" horizontalScrolling="false" resizable="false">
+		<VBox class="dialogPadding" alignItems="Center">
+			<HBox class="dialogStretchText">
+				<core:Icon src="sap-icon://sys-enter" class="iconSize2 sapUiMediumMarginTopBottom successIcon" color="#64E4CE"/>
+			</HBox>
+			<HBox class="dialogHead" width="100%">
+				<Title text="{/Title}" titleStyle="H2" level="H2" class="dialogTitle sapUiLargeMarginBeginEnd sapUiTinyMarginTopBottom" textAlign="Center"/>
+			</HBox>
+			<HBox class="dialogHead" width="100%">
+				<Label text="{/SubTitle}" class="dialogTitle subTitleLabel sapUiTinyMarginBottom sapUiLargeMarginBegin sapUiLargeMarginEnd"
+					textAlign="Center"/>
+			</HBox>
+			<HBox>
+				<Button id="btnOk" text="{/BtnOkText}" press="onCancel" width="100%" type="Emphasized" class=" sapUiSmallMarginTopBottom dialogMultipleBtn"></Button>
+			</HBox>
+		</VBox>
+	</Dialog>
+</core:FragmentDefinition>
