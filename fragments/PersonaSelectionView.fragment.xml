@@ -1,0 +1,25 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout">
+	<Dialog horizontalScrolling="false" draggable="true" class="HRPDialog" showHeader="true" title="Select Personas">
+		<content>
+			<l:VerticalLayout width="100%">
+				<List id="idPersonaListItem" items="{/results}" mode="SingleSelectLeft">
+					<items>
+						<ObjectIdentifier title="{Stext}" text="{Otext}" titleActive="true" titlePress="titleClicked"/>
+						<!--<CustomListItem>-->
+						<!--	<HBox>-->
+						<!--		<RadioButton groupName="GroupA" selected="false" select="$" class="sapUiSmallMarginTop"/>-->
+						<!--		<VBox class="sapUiSmallMarginBegin sapUiTinyMarginTop">-->
+						<!--			<ObjectIdentifier title="{Stext}" text="{Stext}" titleActive="true" titlePress="titleClicked"/>-->
+						<!--			<Label text="{Otext}"/>-->
+						<!--		</VBox>-->
+						<!--	</HBox>-->
+						<!--</CustomListItem>-->
+					</items>
+				</List>
+			</l:VerticalLayout>
+		</content>
+		<buttons>
+			<Button id="btnOk" text="OK" type="Emphasized" press="onPressOkBtn"></Button>
+		</buttons>
+	</Dialog>
+</core:FragmentDefinition>
