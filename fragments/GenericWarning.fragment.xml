@@ -1,0 +1,19 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout">
+	<Dialog class="sapUiResponsiveMargin" showHeader="false"  verticalScrolling="false" horizontalScrolling="false"
+		 resizable="false">
+		<VBox class="dialogStretchText" alignItems="Center">
+			<HBox class="dialogStretchText">
+			<core:Icon src="sap-icon://message-warning" class="iconSize2 sapUiMediumMarginTopBottom" color="#fabd64"/>
+			<core:InvisibleText id="frgInvTxt" text=""/>
+			</HBox><HBox class="dialogStretchText dialogHead" width="100%">
+			<Title text="{/Title}" titleStyle="H1" level="H1" textAlign="Center" class="dialogTitle sapUiLargeMarginBeginEnd sapUiTinyMarginTopBottom"/>
+			</HBox><HBox class="dialogStretchText" width="100%">
+			<Title text="{/SubTitle}" level="H2" textAlign="Center" class="dialogTitle sapUiTinyMarginBottom"/>
+			</HBox><HBox class="sapUiSmallMarginTopBottom">
+				<Button id="btnNo" text="{/BtnNoText}" width="100%" class="dialogMultipleBtn sapUiSmallMarginBegin sapUiSmallMarginTopBottom "></Button>
+				<Button id="btnYes" text="{/BtnYesText}" width="100%" type="Emphasized"
+					class="dialogMultipleBtn sapUiSmallMarginEnd sapUiSmallMarginTopBottom "></Button>
+			</HBox>
+		</VBox>
+	</Dialog>
+</core:FragmentDefinition>
