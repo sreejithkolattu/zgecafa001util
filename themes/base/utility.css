@@ -1,0 +1,179 @@
+.dialogTitle {
+    width: 100%;
+    white-space: pre-wrap !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.hrpDialog {
+    min-width: 35%;
+}
+
+.dialogConfirmTitleFont {
+    font-size: 1.125rem !important;
+    margin-top: 0.5rem !important;
+    line-height: 1.4;
+}
+
+.dialogPadding {
+    margin: 0.625rem;
+}
+
+.dialogConfirmationTitle {
+    width: 100%;
+    justify-content: left;
+    white-space: pre-wrap !important;
+    /*margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 2%;
+    padding-right: 5%;*/
+    text-align: left;
+    overflow: visible;
+}
+
+.dialogConfirmationText {
+    /*padding-top: 5%;*/
+    width: 100%;
+    /*padding-left: 5%;*/
+}
+
+.dialogConfirmationText2 {
+    padding-top: 3%;
+    width: 100%;
+    padding-left: 5%;
+}
+
+.dialogConfirmationText3 {
+    padding-top: 2%;
+    width: 100%;
+    padding-left: 5%;
+}
+
+.dialogSingleBtn {
+    min-width: 8.4375rem;
+    min-height: 2rem;
+}
+
+.successTitle {
+    width: 100%;
+    white-space: pre-wrap !important;
+    overflow: visible;
+}
+
+
+/*.dialogMultipleBtn {
+    min-width: 8.4375rem;
+    min-height: 2rem;
+    padding-right: 2rem !important;
+}*/
+
+.dialogStretchText {
+    width: 100%;
+    justify-content: center;
+}
+
+.dialogHead>div {
+    width: 100% !important;
+}
+
+.dialogPadding5 {
+    padding-right: 5%;
+    padding-left: 5%;
+}
+
+.dialogFlexCol {
+    flex-direction: column;
+}
+
+.dialogBtnMinWidth {
+    min-width: 8.4375rem;
+    min-height: 2rem;
+}
+
+.textBold {
+    font-weight: bold;
+}
+
+.iconSize1 {
+    font-size: 1.5rem;
+}
+
+.iconSize2 {
+    font-size: 5rem;
+}
+
+.iconSize3 {
+    font-size: 6rem;
+}
+
+.btnCustomHRP {
+    min-width: 10.9375rem;
+}
+
+.successIcon {
+    color: #277c79 !important;
+}
+
+.subTitleLabel {
+    color: #5c5c66 !important;
+    font-size: 1rem !important;
+    line-height: 1.3125rem !important;
+    font-family: Lato !important;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.31;
+    letter-spacing: normal;
+    width: 100%;
+    justify-content: left;
+    white-space: pre-wrap !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    text-align: left;
+    overflow: visible;
+}
+
+
+/*.dialogMultipleBtn .sapMBtnInner.sapMBtnText {
+    background-color: #ff6633!important;
+    border-color: #ff6633!important;
+    color: #111111!important;
+    letter-spacing: 0.063rem !important;
+    font-size: 0.875rem !important;
+}
+
+.stayOnThisPageBtn .sapMBtnInner.sapMBtnText {
+    font-family: Lato;
+    font-size: 0.875rem !important;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 0.063rem !important;
+    color: #000000 !important;
+}*/
+
+.horiLayout {
+    display: grid !important;
+}
+
+
+/*.sapUiHLayoutChildWrapper {*/
+
+
+/*    display: grid !important;*/
+
+
+/*}*/
+
+
+/*.horiLayout1.sapUiHLayoutChildWrapper {
+    display: grid!important;
+}
+*/
+
+.verticalLayoutWidth {
+    width: 100%;
+}
