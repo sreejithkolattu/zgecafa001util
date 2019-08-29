@@ -1,0 +1,10 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<ResponsivePopover class="sapUiPopupWithPadding" title="{i18n>LBL_INFO_TITLE_TXT}" placement="Auto" showCloseButton="false">
+		<content>
+			<core:HTML preferDOM="true" content="{i18n>TXT_FILE_UPLOAD_HINT}"/>
+		</content>
+		<endButton>
+			<Button text="Close" press="onCloseUploadInformationDialog"></Button>
+		</endButton>
+	</ResponsivePopover>
+</core:FragmentDefinition>
