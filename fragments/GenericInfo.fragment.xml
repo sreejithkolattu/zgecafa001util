@@ -1,0 +1,36 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout">
+	<Dialog showHeader="false" type="Message"  verticalScrolling="false" horizontalScrolling="false" 
+		resizable="false">
+		<VBox class="dialogPadding dialogStretchText" alignItems="Center" >
+			<HBox class="dialogStretchText">
+			<core:Icon src="sap-icon://sys-enter-2" class="iconSize2 sapUiTinyMarginTop" color="#64E4CE"/>
+			</HBox><HBox class="dialogHead" width="100%">
+			<Title text="{/Title}" titleStyle="H1" level="H1" textAlign="Center" class="dialogTitle sapUiLargeMarginBeginEnd sapUiTinyMarginTopBottom"/>
+			</HBox>
+			<l:HorizontalLayout class=" sapUiNoMarginBegin">
+				<l:content>
+					<l:VerticalLayout class=" sapUiNoMarginBottom sapUiContentPadding sapUiNoMarginBegin">
+						<l:content>
+							<Text class="sapUiTinyMarginBottom" text="{/Label1}"></Text>
+							<Text class="sapUiTinyMarginBottom" text="{/Label2}"></Text>
+							<Text class="sapUiTinyMarginBottom" text="{/Label3}"></Text>
+						</l:content>
+					</l:VerticalLayout>
+					<l:VerticalLayout class="sapUiNoMarginBottom sapUiContentPadding sapUiNoMarginBegin">
+						<l:content>
+							<Text class="sapUiTinyMarginBottom" text="{/Text1}"></Text>
+							<Text class="sapUiTinyMarginBottom" text="{/Text2}"></Text>
+							<Text class="sapUiTinyMarginBottom" text="{/Text3}"></Text>
+						</l:content>
+					</l:VerticalLayout>
+				</l:content>
+			</l:HorizontalLayout>
+			<HBox class="sapUiNoMarginTop sapUiTinyMarginBottom">
+					<Button id="btnOk" text="{/BtnOkText}"  width="100%" type="Emphasized"
+					class="dialogSingleBtn sapUiSmallMarginEnd sapUiNoMarginTop "></Button>
+				
+			</HBox>
+		</VBox>
+
+	</Dialog>
+</core:FragmentDefinition>
