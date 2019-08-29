@@ -1,0 +1,19 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout">
+	<Dialog horizontalScrolling="false" draggable="true" contentWidth="400px" contentHeight="350px" class="sapUiResponsiveMargin"
+		showHeader="true" title="Select Persona to continue">
+		<content>
+			<l:VerticalLayout width="100%">
+				<List id="idPersonaListItem" items="{/results}" mode="SingleSelectLeft">
+					<items>
+						<CustomListItem class="sapUiTinyMarginBegin">
+							<ObjectIdentifier title="{Stext}" text="{Otext}" class="sapUiSmallMargin"/>
+						</CustomListItem>
+					</items>
+				</List>
+			</l:VerticalLayout>
+		</content>
+		<buttons>
+			<Button id="btnOk" text="CONTINUE" type="Emphasized" press="onPersonaSelection"></Button>
+		</buttons>
+	</Dialog>
+</core:FragmentDefinition>
