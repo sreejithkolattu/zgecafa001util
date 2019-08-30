@@ -1,0 +1,10 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<ResponsivePopover class="sapUiPopupWithPadding" title="{/Title}" placement="Auto" showCloseButton="false">
+		<content>
+			<core:HTML preferDOM="true" content="{/BodyText}"/>
+		</content>
+		<endButton>
+			<Button id="btnOk" press="onCancel" text="{/BtnOkText}" type="Emphasized" class="dialogSingleBtn sapUiSmallMarginTopBottom"></Button>
+		</endButton>
+	</ResponsivePopover>
+</core:FragmentDefinition>
