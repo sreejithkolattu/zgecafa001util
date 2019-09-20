@@ -1,0 +1,32 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout">
+	<Dialog showHeader="false" verticalScrolling="false" horizontalScrolling="false" resizable="false">
+		<l:VerticalLayout class="sapUiContentPadding verticalLayoutWidth">
+			<FlexBox alignItems="Center" justifyContent="Center">
+				<items>
+					<core:Icon src="sap-icon://sys-enter" class="iconSize2 successIcon sapUiTinyMarginTopBottom" color="#64E4CE"/>
+				</items>
+			</FlexBox>
+			<FlexBox alignItems="Center" justifyContent="Center">
+				<items>
+					<Title text="{/Title}" titleStyle="H2" level="H2" class="successTitle" textAlign="Center"/>
+				</items>
+			</FlexBox>
+			<FlexBox alignItems="Center" justifyContent="Center">
+				<items>
+					<Label text="{/SubTitle}" class="subTitleLabel sapUiNoContentPadding" textAlign="Center"/>
+				</items>
+			</FlexBox>
+			<!--<l:HorizontalLayout class="dialogConfirmationText horiLayout horiLayout1">
+				<Title text="{/Title}" titleStyle="H2" level="H2" class="successTitle" textAlign="Center"/>
+			</l:HorizontalLayout>
+			<l:HorizontalLayout class="dialogConfirmationText horiLayout horiLayout1">
+				<Label text="{/SubTitle}" class="subTitleLabel sapUiNoContentPadding" textAlign="Center"/>
+			</l:HorizontalLayout>-->
+			<FlexBox alignItems="Center" justifyContent="Center">
+				<items>
+					<Button id="btnOk" text="{/BtnOkText}" press="onCancel" width="100%" type="Emphasized" class="dialogSingleBtn sapUiSmallMarginTopBottom"></Button>
+				</items>
+			</FlexBox>
+		</l:VerticalLayout>
+	</Dialog>
+</core:FragmentDefinition>
