@@ -1,0 +1,12 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core">
+	<Dialog title="eSignature" contentWidth="510px">
+		<VBox >
+			<core:HTML id="eSignHtml"></core:HTML>
+		</VBox>
+		<buttons>
+			<Button id="btnCancel" text="Cancel" visible="true" class="button1 myRedButton button" press="closeDialog"></Button>
+			<Button id="btnClear" text="Clear" visible="true" class="sapUiSmallMarginBegin myRedButton button" press="clearButton"></Button>
+			<Button id="btnApply" text="Apply" type="Emphasized" class="button sapUiSmallMarginBegin myRedButton " visible="true" press="clearButton"></Button>
+		</buttons>
+	</Dialog>
+</core:FragmentDefinition>
